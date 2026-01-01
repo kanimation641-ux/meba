@@ -1,9 +1,13 @@
 
 import React, { useMemo } from 'react';
 
-const Snowfall: React.FC = () => {
+interface SnowfallProps {
+  density?: number;
+}
+
+const Snowfall: React.FC<SnowfallProps> = ({ density = 50 }) => {
   const snowflakes = useMemo(() => {
-    return Array.from({ length: 50 }).map((_, i) => ({
+    return Array.from({ length: density }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       duration: `${5 + Math.random() * 10}s`,
@@ -11,7 +15,7 @@ const Snowfall: React.FC = () => {
       size: `${10 + Math.random() * 20}px`,
       opacity: 0.3 + Math.random() * 0.7,
     }));
-  }, []);
+  }, [density]);
 
   return (
     <>

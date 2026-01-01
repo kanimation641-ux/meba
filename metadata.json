@@ -1,5 +1,7 @@
 {
-  "name": "TSAI: The Smartest AI",
-  "description": "The North Pole's most advanced artificial intelligence, featuring festive math and knowledge tools.",
-  "requestFramePermissions": []
+  "name": "TSAI: Festive Paradox",
+  "description": "A chaotic fusion of Christmas, Halloween, and New Year's intelligence.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
 }
